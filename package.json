@@ -1,0 +1,19 @@
+{
+  "name": "generasi_gigih_3.0",
+  "version": "1.0.0",
+  "description": "Repo for hands on, exercise, homework from technical class (MERN) ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Arfan Dwi Sukmajaya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.0",
+    "nodemon": "^3.0.1"
+  }
+}
