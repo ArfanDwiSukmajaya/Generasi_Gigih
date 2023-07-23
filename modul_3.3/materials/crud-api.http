@@ -1,0 +1,33 @@
+### Send POST request with json body
+POST http://localhost:3000/api/post
+Content-Type: application/json
+
+{
+  "title": "The Bad Boys",
+  "year" : 2010
+}
+
+### GET request with a header
+GET http://localhost:3000/api/getAll
+Accept: application/json
+
+
+### GET By Id
+GET http://localhost:3000/api/get/64bce8955b03c1cee325b033
+Accept: application/json
+
+
+### Update Movie
+PATCH http://localhost:3000/api/update/64bce8955b03c1cee325b033
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title" : "Ip Man 2"
+}
+
+### Remove Movie
+DELETE http://localhost:3000/api/delete/64bcecdd7ef8d19e14d6c054
+Accept: application/json
+
+
