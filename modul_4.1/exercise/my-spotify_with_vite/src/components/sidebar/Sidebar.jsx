@@ -1,39 +1,39 @@
 import React from "react";
-import "./Sidebare.css";
+import "./Sidebar.css";
 
-export default function Sidebare() {
+export default function Sidebar() {
   return (
     <>
-      <div class="sidebar">
-        <div class="navigation">
+      <div className="sidebar">
+        <div className="navigation">
           <ul>
             <li>
-              <a href="" class="active">
+              <a href="" className="active">
                 {" "}
-                <span class="fa fa-home"></span> Home{" "}
+                <span className="fa fa-home"></span> Home{" "}
               </a>
             </li>
             <li>
               <a href="">
                 {" "}
-                <span class="fa fa-search"></span> Search{" "}
+                <span className="fa fa-search"></span> Search{" "}
               </a>
             </li>
           </ul>
         </div>
-        <div class="navigation library">
+        <div className="navigation library">
           <ul>
             <li>
               <a href="">
-                <span class="fa fa-book"></span> Your Library
-                <span class="fa fa-plus"></span>
+                <span className="fa fa-book"></span> Your Library
+                <span className="fa fa-plus"></span>
               </a>
             </li>
           </ul>
           <div className="sidebare-box">
             <h5>Add To your playlist</h5>
 
-            <button>Add Playlist</button>
+            <button>Create Playlist</button>
           </div>
         </div>
       </div>
