@@ -35,3 +35,19 @@ export const getCommentByVideoID = async (videoID) => {
     throw new Error(err);
   }
 };
+
+// detele comment function by commentID;
+export const deleteComment = async (commentID) => {
+  try {
+    const cekComment = await Video.findOne({ comments: { $elemMatch: { commentID: commentID } } });
+    if (!cekComment) {
+      return { status: 400, message: "Comment not found" };
+    }
+    // const comment = Video.comments.find((comment) => comment.commentID === commentID);
+    const commentIndex = cekComment.comments.findIndex((comment) => comment.commentID === commentID);
+    cekComment.comments.splice(commentIndex, 1);
+    return await cekComment.save();
+  } catch (err) {
+    throw new Error(err);
+  }
+};

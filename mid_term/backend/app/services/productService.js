@@ -51,3 +51,20 @@ export const deleteProductByProductID = async (productID) => {
     throw new Error(err);
   }
 };
+
+// update product function by productID
+export const updateProduct = async (productID, productData) => {
+  try {
+    const cekProduct = await Video.findOne({ products: { $elemMatch: { productID: productID } } });
+    if (!cekProduct) {
+      return { status: 400, message: "Product not found" };
+    }
+    const productIndex = cekProduct.products.findIndex((product) => product.productID === productID);
+    cekProduct.products[productIndex].title = productData.title;
+    cekProduct.products[productIndex].price = productData.price;
+    cekProduct.products[productIndex].link = productData.link;
+    return await cekProduct.save();
+  } catch (err) {
+    throw new Error(err);
+  }
+};
