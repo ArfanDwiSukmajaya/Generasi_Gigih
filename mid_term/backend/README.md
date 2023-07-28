@@ -278,7 +278,7 @@ The database structure for the Tokopedia Play Clone is designed using MongoDB. I
   - **Code:** 500
   - **Content:** `{ message: <error_message> }`
 
-#$ 3. How to run in local
+## 3. How to run in local
 
 ```
 1. Open Terminal/CMD on project folder directory
